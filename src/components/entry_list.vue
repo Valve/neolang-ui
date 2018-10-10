@@ -13,7 +13,7 @@ export default {
     }
   },
   created: function(){
-    this.$http.get('http://api.neolang.app/v1/entries')
+    this.$http.get('https://api.neolang.app/v1/entries')
       .then(function(res){
         this.entries = res.data;
       });
