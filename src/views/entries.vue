@@ -4,10 +4,10 @@
   </div>
 </template>
 <script>
-  import entry_list from '@/components/entry_list.vue'
-  export default {
-    components: {
-      entry_list
-    }
+import entry_list from '@/components/entry_list.vue'
+export default {
+  components: {
+    entry_list
   }
+};
 </script>
