@@ -1,7 +1,10 @@
 <template>
-  <ul class="list-group">
-    <li class="list-group-item" v-for="e in entries">
-      <b>{{e.entry }}</b> &nbsp;- {{e.translation}}
+  <ul class="list-group shadow">
+    <li class="list-group-item list-group-item-action" 
+        v-for="entry in entries" 
+        :key="entry.id" 
+        v-on:click="$emit('click', entry)">
+      <b>{{entry.entry }}</b> &nbsp;- {{entry.translation}}
     </li>
   </ul>
 </template>
