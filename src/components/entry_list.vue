@@ -2,18 +2,11 @@
   <div class="columns">
     <div class="column is-one-third">
       <nav class="panel">
-        <p class="panel-heading"> Words (Georgian)</p>
-        <div class="panel-block">
-          <p class="control has-icons-left">
+        <div class="panel-heading"> 
+          <p class="control">
             <input class="input" type="text" placeholder="search">
           </p>
         </div>
-        <p class="panel-tabs">
-          <a class="is-active">all</a>
-          <a>verbs</a>
-          <a>nounts</a>
-          <a>adverbs</a>
-        </p>
         <a class="panel-block" v-for="e in entries">
           <b>{{e.entry }}</b> &nbsp;- {{e.translation}}
         </a>
