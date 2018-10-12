@@ -1,6 +1,19 @@
 <template>
   <div>
-    <entry_list/>
+    <header>
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 entries-container">
+        <entry_list/>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -11,3 +24,8 @@ export default {
   }
 };
 </script>
+<style>
+  .entries-container {
+    margin-top: 4rem;
+  }
+</style>
