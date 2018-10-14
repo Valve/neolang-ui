@@ -9,42 +9,28 @@
     </header>
     <div class="row">
       <div class="col entries-container">
-        <entry_list v-on:click="entryClick" v-bind:visible="!entry.selected"/>
-        <entry_card v-bind:entry="entry" v-bind:visible="entry.selected" v-on:close="cardClose"/>
+        <entry_list v-on:click="entryClick" />
       </div>
     </div>
   </div>
 </template>
 <script>
-const defaultEntry = {
-  id: 0, 
-  entry: "Hi!", 
-  translation: "გამარჯობა!", 
-  comment: "Click on a word to get started",
-  selected: false
-};
-import entry_list from '@/components/entry_list.vue';
-import entry_card from '@/components/entry_card.vue';
-export default {
-  components: {
-    entry_list,
-    entry_card
-  },
-  data: function() {
-    return {
-      entry: defaultEntry
-    }
-  },
-  methods: {
-    entryClick: function(entry) {
-      this.entry = entry;
-      this.entry.selected = true;
+  import entry_list from '@/components/entry_list.vue';
+  export default {
+    components: {
+      entry_list,
     },
-    cardClose: function() {
-      this.entry = defaultEntry;
+    data: function () {
+      return {
+        entry: {}
+      }
+    },
+    methods: {
+      entryClick: function (entry) {
+        this.$router.push({path: "/entry/" + entry.id});
+      },
     }
-  }
-};
+  };
 </script>
 <style>
   .entries-container {

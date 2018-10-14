@@ -1,5 +1,5 @@
 <template>
-  <ul class="list-group shadow" v-if="visible">
+  <ul class="list-group shadow">
     <li class="list-group-item list-group-item-action" 
         v-for="entry in entries" 
         :key="entry.id" 
@@ -10,9 +10,6 @@
 </template>
 <script>
 export default {
-  props: {
-    visible: Boolean
-  },
   data: function() {
     return {
       entries: []
