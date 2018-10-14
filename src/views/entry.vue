@@ -64,7 +64,7 @@
       }
     },
     created: function () {
-      this.$http.get("htts://api.neolang.app/v1/entries/" + this.$route.params.id).then(function (res) {
+      this.$http.get("https://api.neolang.app/v1/entries/" + this.$route.params.id).then(function (res) {
         this.entry = res.data;
       });
     }
